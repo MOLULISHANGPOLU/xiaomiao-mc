@@ -1,0 +1,22 @@
+// 重定向被墙的 Maven Central / plugins.gradle.org 到阿里云镜像
+import org.gradle.api.artifacts.repositories.MavenArtifactRepository
+
+def redirect = { repo ->
+    if (repo instanceof MavenArtifactRepository) {
+        def u = repo.url == null ? '' : repo.url.toString()
+        if (u.startsWith('https://repo.maven.apache.org/') || u.startsWith('https://repo1.maven.org/')) {
+            repo.setUrl('https://maven.aliyun.com/repository/public')
+        } else if (u.startsWith('https://plugins.gradle.org/')) {
+            repo.setUrl('https://maven.aliyun.com/repository/gradle-plugin')
+        }
+    }
+}
+
+settingsEvaluated { settings ->
+    settings.pluginManagement.repositories.all { redirect(it) }
+}
+
+allprojects {
+    repositories.all { redirect(it) }
+    buildscript.repositories.all { redirect(it) }
+}

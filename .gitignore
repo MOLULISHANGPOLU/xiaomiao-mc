@@ -1,0 +1,23 @@
+# ===== 隐私与运行时产物（永不上传）=====
+*.log
+*.lock
+*.wav
+*.dat
+ai-memory/
+ps-test.txt
+hd-cmd.txt
+hd-req.txt
+hd-res.txt
+
+# ===== 构建缓存（可再生，别传）=====
+.gradle/
+build/
+*.class
+
+# ===== 系统/编辑器杂项 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 填了真实 key 之后：确认你没有把 voice-ai.json 提交上来 =====
+# （本仓库里的 voice-ai.json 只含占位符；填真 key 后不要 git add 它）

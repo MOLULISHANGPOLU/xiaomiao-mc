@@ -1,0 +1,47 @@
+{
+  "_说明": "这是全项目唯一需要改的配置文件。带 _ 前缀的键都是注释，不用动。真正要填的值都空着，按 _xxx 注释填。路径里的反斜杠要写两个（\\\\）。填完存盘再启动。",
+  "paths": {
+    "_minecraftDir": "你的 .minecraft 游戏目录（versions 文件夹的上一级）",
+    "minecraftDir": "",
+    "_serverDir": "Fabric 服务端目录（里面有 server.properties 的那个）",
+    "serverDir": "",
+    "_serverJava": "服务端用的 java.exe 完整路径（要 Java 21+）",
+    "serverJava": "",
+    "_clientJava": "客户端用的 java.exe 完整路径（Java 25）",
+    "clientJava": "",
+    "_pclBat": "PCL 启动器的 LatestLaunch.bat（用 PCL2 启动器才有；不用 PCL 留空并告诉你的 AI）",
+    "pclBat": "",
+    "_voiceToolDir": "【语音版必填】wechat-voice 工具目录（里面有 audioio.exe 和 say_to_call.cjs）",
+    "voiceToolDir": "",
+    "_sherpaNode": "【语音版必填】sherpa-onnx.node 的完整路径（语音识别运行时）",
+    "sherpaNode": "",
+    "_sensevoiceModelDir": "【语音版必填】SenseVoice 语音识别模型目录",
+    "sensevoiceModelDir": "",
+    "_authlibJar": "authlib-injector.jar 完整路径（LittleSkin 外置登录必填；用官方正版登录留空并告诉你的 AI）",
+    "authlibJar": "",
+    "_authlibUrl": "外置登录服务地址，用 LittleSkin 就不用改",
+    "authlibUrl": "https://littleskin.cn/api/yggdrasil",
+    "_nodeExe": "node.exe 完整路径（默认的就填这个）",
+    "nodeExe": "C:\\Program Files\\nodejs\\node.exe",
+    "_powershellExe": "powershell.exe 完整路径（默认的就填这个）",
+    "powershellExe": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "_serverLog": "服务端 latest.log 的完整路径",
+    "serverLog": "",
+    "_mewClientLog": "小喵客户端（隐身客户端）latest.log 的完整路径",
+    "mewClientLog": "",
+    "_mewVersionDir": "小喵客户端在 versions 下的目录名",
+    "mewVersionDir": "小喵的家-mew",
+    "_userVersionDir": "你自己的客户端在 versions 下的目录名",
+    "userVersionDir": "小喵的家"
+  },
+  "players": {
+    "_user": "你自己进服用的游戏名（必填）",
+    "user": "",
+    "_bot": "小喵身体的游戏名。成品模组里写死了 LittleMew，除非重新编译模组，否则别改",
+    "bot": "LittleMew"
+  },
+  "features": {
+    "_说明": "voice=要不要语音对话。false=纯文字版：不装声卡、不装语音识别模型也能玩，靠游戏聊天框打字下指令。纯文字版会自动不出声；想让小喵在聊天框回话，用 1-程序\\大脑\\voice-ai.json 的 chatText 开关。",
+    "voice": true
+  }
+}

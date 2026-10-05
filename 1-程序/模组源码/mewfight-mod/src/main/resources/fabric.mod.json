@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "mewfight",
+  "version": "${version}",
+  "name": "MewFight",
+  "description": "小喵自动战斗模组：锁最近敌对生物、自动瞄准、按武器冷却挥剑、受伤自动还手。聊天里敲 /mewfight 开关。",
+  "authors": ["小喵"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.mew.fight.MewFightMod"],
+    "voicechat": ["com.mew.fight.VoicechatReadyPlugin"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": ["26.1.*"],
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "voicechat": "*"
+  }
+}

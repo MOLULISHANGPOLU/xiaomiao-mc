@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "mewbackpack",
+  "version": "${version}",
+  "name": "MewBackpack",
+  "description": "小喵背包面板：shift+右键 LittleMew 打开装备面板（主手高亮+副手盾牌位+盔甲4格+主背包+快捷栏），可拖动管理。双端模组。",
+  "authors": ["小喵"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.mew.backpack.MewBackpackMod"],
+    "client": ["com.mew.backpack.MewBackpackClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": ["26.1.*"],
+    "fabric-api": "*"
+  }
+}

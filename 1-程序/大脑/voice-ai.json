@@ -1,0 +1,38 @@
+{
+  "baseUrl": "https://api.deepseek.com/v1",
+  "apiKey": "sk-填你自己的API密钥",
+  "model": "deepseek-chat",
+  "temperature": 0.8,
+  "maxTokens": 1000,
+  "persona": "你是小喵，用户的电脑助理，现在在《我的世界》里用语音陪他玩。回话要短、口语化、像朋友，一到两句、不超过 133 个字；不要念 Markdown、不要用表情符号、不要报路径；不确定的事就说不知道。",
+  "wakeWords": [
+    "小喵",
+    "小苗",
+    "喵喵",
+    "听得到吗",
+    "听得见吗",
+    "你在吗",
+    "在吗"
+  ],
+  "wakeWindowSec": 90,
+  "cooldownSec": 2,
+  "maxReplyChars": 133,
+  "contextTurns": 14,
+  "compressAtChars": 2000,
+  "keepRecentTurns": 6,
+  "memoryTopK": 5,
+  "memoryInjectChars": 1200,
+  "speak": true,
+  "chatText": true,
+  "echoUserText": true,
+  "ear": {
+    "device": "",
+    "_device": "语音版必填：监听用的播放设备名（系统声音设置里能看到的名字，比如你的耳机；语音版问卷会问）",
+    "db": -48
+  },
+  "ui": {
+    "enabled": true,
+    "port": 8799,
+    "autoOpen": true
+  }
+}

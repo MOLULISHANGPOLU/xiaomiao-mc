@@ -1,0 +1,39 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        // 国内镜像：Maven Central 与插件仓库证书过期/被墙，走阿里云
+        maven {
+            name = 'AliyunPublic'
+            url = 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            name = 'AliyunGradlePlugin'
+            url = 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        maven {
+            name = 'AliyunPublic'
+            url = 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            name = 'Mojang'
+            url = 'https://libraries.minecraft.net/'
+        }
+        // 不写 mavenCentral()：repo.maven.apache.org TLS 证书被墙，PREFER_SETTINGS 下会先于 Loom 本地仓库被查导致超时失败
+    }
+}
+
+rootProject.name = 'mewfight'
