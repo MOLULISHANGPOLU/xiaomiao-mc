@@ -85,7 +85,7 @@ function loadCfg() {
 const CFG = loadCfg();
 if (APPCFG.features && APPCFG.features.voice === false) CFG.speak = false;   // 纯文字版自动闭嘴（不碰 TTS 链路）
 if (has('--nospeak')) CFG.speak = false;      // 测试用：只写字不出声
-function keyOk() { return !!(CFG.apiKey && CFG.apiKey.trim().length > 8); }
+function keyOk() { const k = CFG.apiKey && CFG.apiKey.trim(); return !!(k && k.length > 8 && !k.includes('填你自己的')); }   // 仓库自带占位符不算"已配置"
 // 多供应商：providers 数组优先（免费 API 在前，deepseek 兜底）；没有则退回旧的单 provider 字段
 function providerList() {
   if (Array.isArray(CFG.providers) && CFG.providers.length) {
